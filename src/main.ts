@@ -1,0 +1,4 @@
+import {bootstrapApplication} from '@angular/platform-browser'; import {Component} from '@angular/core'; import {CommonModule} from '@angular/common'; import './styles.css';
+@Component({selector:'app-root',standalone:true,imports:[CommonModule],template:`<main><div class="top"><span>ANGULAR</span><h1>Operations Dashboard</h1><p>Modern Angular standalone application starter.</p></div><section class="grid"><article *ngFor="let c of cards"><b>{{c[0]}}</b><strong>{{c[1]}}</strong><small>{{c[2]}}</small></article></section><footer>Angular • Ready for API integration</footer></main>`})
+class AppComponent{cards=[['Services','20','Healthy services'],['Deployments','48','This month'],['Uptime','99.98%','Last 30 days'],['Environment','UAT','Release baseline']];}
+bootstrapApplication(AppComponent);
